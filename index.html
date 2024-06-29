@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>内存管理模拟</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <style>
+
+    .navbar-inner {
+      background: rgb(173, 216, 230); /* 浅蓝色 */
+    }
+
+    .navbar-inner h1 {
+      color: blue; /* 蓝色 */
+    }
+
+    .choose-algorithm h2,
+    .related-parameters h2,
+    .simulation-result h2 {
+      color: blue; /* 蓝色 */
+    }
+
+    .footer {
+      background: rgb(173, 216, 230); /* 浅蓝色 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <h1 class="text-center">内存管理模拟</h1>
+      </div>
+    </div>
+  </header>
+
+  <br><br>
+  <main id="main">
+    <div style="display: flex;flex-direction: row;">
+      <div style="display: flex;flex-direction: column;">
+        <div class="show">
+          <table class="presenting_table" id="simulation-information">
+            <colgroup>
+              <col style="width: 100px;">
+              <col style="width: 100px;">
+              <col style="width: 100px;">
+              <col style="width: 200px;">
+              <col style="width: 200px;">
+              <col style="width: 200px;">
+              <col style="width: 200px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">顺序</th>
+                <th scope="col">指令</th>
+                <th scope="col">下一步指令</th>
+                <th scope="col">内存块 1</th>
+                <th scope="col">内存块 2</th>
+                <th scope="col">内存块 3</th>
+                <th scope="col">内存块 4</th>
+              </tr>
+            </thead>
+          </table>
+          <script>
+            var row = document.getElementById("simulation-information").insertRow()
+            row.insertCell(0).innerHTML = 0
+            row.insertCell(1).innerHTML = "NULL"
+            row.insertCell(2).innerHTML = "NULL"
+            row.insertCell(3).innerHTML = "空"
+            row.insertCell(4).innerHTML = "空"
+            row.insertCell(5).innerHTML = "空"
+            row.insertCell(6).innerHTML = "空"
+          </script>
+        </div>
+      </div>
+
+      <div style="display: flex;flex-direction: column;">
+        <div class="choose-algorithm">
+          <h2>选择页面置换算法</h2>
+          <div style="text-align: left;">
+            <label for="fifo-ratio1">
+              <input type="radio" name="algorithm" id="FIFORatio" value="FIFO" checked> 先进先出
+            </label>
+            <br><br>
+            <label for="lru-ratio">
+              <input type="radio" name="algorithm" id="LRURatio" value="LRU"> 最近最少使用
+            </label>
+            <br><br>
+          </div>
+        </div>
+
+        <div class="related-parameters">
+          <h2>相关参数</h2>
+          <h3>内存块数：<span id="Memory_Blocks_Count">4</span></h3>
+          <h3>总指令数：<span id="Instructions_Count">320</span></h3>
+          <h3>每页指令数：<span id="Instructions_Count_Per_Page">10</span></h3>
+        </div>
+
+        <div class="simulation-result">
+          <h2>模拟结果</h2>
+          <h3>页错误次数：<span id="Page_Fault_Count">NULL</span></h3>
+          <h3>页错误率：<span id="Page_Fault_Rate">NULL</span></h3>
+        </div>
+        <br>
+        <button id="Start_Simulation">点击开始</button>
+        <button id="Clear">清除</button>
+
+      </div>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <div class="footer">
+    2024, 张正阳 <br>
+  </div>
+</body>
+
+</html>

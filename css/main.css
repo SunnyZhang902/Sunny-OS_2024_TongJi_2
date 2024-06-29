@@ -1,0 +1,138 @@
+/*2253230 张正阳*/
+@charset "UTF-8";
+
+html {
+  background: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 11px;
+}
+
+table,
+th,
+td {
+  border: 2px solid rgb(50, 132, 255);
+}
+
+table {
+  width: 95%;
+  margin: auto;
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  background-color: floralwhite;
+  color: rgb(0, 76, 255);
+  /*表格高度*/
+  height: 35px;
+  border-spacing: 0px;
+}
+
+th,
+td {
+  padding: 10px;
+  /*单元格宽度*/
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.show {
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: none;
+  text-align: center;
+}
+
+#memory_table {
+  width: 100%;
+  margin: auto;
+  /*表格高度*/
+  vertical-align: middle;
+}
+
+header {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  font-size: large;
+  /*底部边框样式*/
+}
+
+header * {
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: large;
+  /*文本对齐*/
+  border-bottom: white solid 3px;
+}
+
+h3 {
+  color: white;
+  font-size: medium;
+  text-align: left;
+}
+
+.choose-algorithm {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  background: rgb(76, 120, 224);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: left;
+}
+
+.related-parameters {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  background: rgb(76, 120, 224);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: left;
+}
+
+.simulation-result {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  background: rgb(76, 120, 224);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: right;
+}
+
+label {
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  background: rgb(76, 120, 224);
+  border-radius: 15px;
+  border-color: transparent;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 5%;
+  margin-left: 10px;
+}
+
+.footer {
+  display: inline-block;
+  vertical-align: middle;
+  color: rgb(76, 120, 224);
+}
